@@ -4,16 +4,16 @@ body{
     display: flex; 
     justify-content: center; 
     align-content: center; 
-    overflow: hidden;
+    /* overflow-x: hidden; */
 }
 
 .body {
     width: 375px;
-    height: 812px;
+    height: 830px;
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    background-color: white;
+    /* background-color: #030880; */
 }
 
 /* ----------------------------
@@ -22,24 +22,31 @@ body{
 .profile_company {
     width: 100%;
     height: 70px;
-    /* background-color: aqua;   */
+    background-color: aqua;  
     display: flex;
     /* justify-content: center; */
     /* align-items: center;   */
 
     margin-top: 5px;
+    border: 2px solid blue;
+    border-radius: 5px;
 }
 .profile_company img {
     width: auto;
     height: 100%;
+    border-radius: 5px 0px 0px 5px;
 }
 .profile_company h1 {
     font-family: Battambang;
-    font-size: 20px;
-    font-weight: bolder;
+    font-size: 22px;
+    font-weight: bold;
     margin-left: 5px;
     margin-top: 0px;
+    color: blue;
+    line-height: 1.5;
 }
+
+
 
 /* ----------------------------
         Contianner
@@ -47,13 +54,28 @@ body{
 .body .contianer {
     width: 100%;
     height: auto;
-    /* background-color: black;  */
+    background-color: white; 
     margin-top: -5px;   
 }
+
 
 /* -------------------------------------
         IMG and DEFINETION TITLE
     --------------------------------------*/
+img{
+    width: 55px;
+    height: 55px;
+    float: left;
+}
+.img{
+    width: 60px;
+    height: 60px;
+    /* background-color: green; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .defin{
     width: 80px;
     height: 18px;
@@ -74,15 +96,30 @@ body{
     color: black;
     text-align: center;
 }
-.img{
+#boxs{
     width: 100px;
-    height: 80px;
-    /* background-color: green; */
+    height: 90px;
+    background-color: wheat;
+    float: left;
+    flex-direction: column;
+    
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+#boxs:active, #boxs:focus {
+    background-color: yellow;
+}
+#boxs:hover, #boxs:active {
+    background-color: yellow;
+}
+
 
 
 /* ----------------------------
@@ -90,18 +127,15 @@ body{
     ----------------------------*/
 .contianer .vending{
     width: 375px;
-    height: 148px;
+    height: 139px;
     /* background-color: red;  */
+    margin-top: 10px;
 }
- .vending img{
-    width: 65px;
-    height: 65px;
-    float: left;
-}
+
 .vending .title {
     width: 95%;
-    height: 30px;
-    background-color: lightgrey;   
+    height: 35px;
+    background-color: deeppink;   
     padding-left: 10px;
     margin-left: 2.5%;
 
@@ -114,42 +148,28 @@ body{
     font-family: Battambang;
     font-weight: bold;
     font-size: 17px;
-    color: black;
+    color: white;
     display: flex;
 }
+
 
 
     /*--- Vendnig Machine One */
 .vending .vending_1{
-    width: 233px;
-    height: 100px;
+    width: 220px;
+    height: 90px;
     /* background-color: greenyellow; */
-    margin-top: 5px;
+    margin-top: 10px;
     float: left;
     margin-left: 2.5%;
 }
-.vending_1 .soap_1{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .vending_1 .fabric_1{
-    width: 110px;
-    height: 105px;
+    width: 100px;
+    height: 90px;
     background-color: wheat;
-    flex-direction: column;
     float: left;
-    margin-left: 13px;
+    flex-direction: column;
+    margin-left: 15px;
 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
     border-radius: 5px;
@@ -169,19 +189,15 @@ body{
     ----------------------------*/
 .contianer .washing{
     width: 375px;
-    height: 260px;
+    height: auto;
     /* background-color: green;  */
-    margin-top: -10px;
+    margin-top: 5px;
 }
-.washing img{
-    width: 65px;
-    height: 65px;
-    float: left;
-}
+
 .washing .title {
     width: 95%;
-    height: 30px;
-    background-color: lightgrey;   
+    height: 35px;
+    background-color: deeppink;   
     padding-left: 10px;
     margin-left: 2.5%;
     margin-bottom: 5px;
@@ -195,126 +211,56 @@ body{
     font-family: Battambang;
     font-weight: bold;
     font-size: 17px;
-    color: black;
+    color: white;
     display: flex;
 }
 
 .washing .type_9kg{
-    width: 95%;
-    height: 105px;
-    /* background-color: deepskyblue; */
-    float: left;
-    margin-left: 2.5%;
+    width: 375px;
+    height: 139px;
+    /* background-color: deepskyblue;  */
+    margin-top: -10px;
 }
 
 
     /*--- Washing Machine 9kg One */
 .washing .washing_9kg_1{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 2.5%;
+    margin-top: 5px;
 }
 
 
     /*--- Washing Machine 9kg Two */
 .washing .washing_9kg_2{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
-    margin-left: 13px;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 
     /*--- Washing Machine 9kg Three */
 .washing .washing_9kg_3{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
-    margin-left: 13px;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.washing .type_9kg{
-    width: 95%;
-    height: 105px;
-    /* background-color: deepskyblue; */
-    float: left;
-    margin-left: 2.5%;
-}
-
-    /*--- Washing Machine 12kg One */
-.washing .washing_12kg_1{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
-    /* margin-left: 5px; */
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 
 .washing .type_12kg{
-    width: 95%;
-    height: 105px;
-    /* background-color: deepskyblue; */
-    float: left;
-    margin-left: 2.5%;
-    margin-top: 7px;
+    width: 375px;
+    height: 139px;
+    /* background-color: darkgoldenrod;  */
+    margin-top: -10px;
 }
+
+    /*--- Washing Machine 12kg One */
+.washing .washing_12kg_1{
+    margin-left: 2.5%;
+    margin-top: 5px;
+}
+
     /*--- Washing Machine 12kg Two */
 .washing .washing_12kg_2{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
-    margin-left: 13px;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 
@@ -323,19 +269,15 @@ body{
     ----------------------------*/
 .contianer .dryer{
     width: 375px;
-    height: 148px;
-    /* background-color: yellow;  */
+    height: 139px;
+    /* background-color: blueviolet;  */
     margin-top: -10px;
 }
-.dryer img{
-    width: 65px;
-    height: 65px;
-    float: left;
-}
+
 .dryer .title {
     width: 95%;
-    height: 30px;
-    background-color: lightgrey;   
+    height: 35px;
+    background-color: deeppink;   
     padding-left: 10px;
     margin-left: 2.5%;
     margin-bottom: 5px;
@@ -349,44 +291,20 @@ body{
     font-family: Battambang;
     font-weight: bold;
     font-size: 17px;
-    color: black;
+    color: white;
     display: flex;
 }
 
     /*--- Dryer Machine One */
 .dryer .dryer_1{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
     margin-left: 2.5%;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 5px;
 }
 
     /*--- Dryer Machine Two */
 .dryer .dryer_2{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
-    margin-left: 13px;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 
@@ -397,19 +315,15 @@ body{
     ----------------------------*/
 .contianer .ironing{
     width: 375px;
-    height: 148px;
-    /* background-color: blue;  */
+    height: 139px;
+    /* background-color: darkslategray;  */
     margin-top: -10px;
 }
-.ironing img{
-    width: 65px;
-    height: 65px;
-    float: left;
-}
+
 .ironing .title {
     width: 95%;
-    height: 30px;
-    background-color: lightgrey;   
+    height: 35px;
+    background-color: deeppink;   
     padding-left: 10px;
     margin-left: 2.5%;
     margin-bottom: 5px;
@@ -423,43 +337,19 @@ body{
     font-family: Battambang;
     font-weight: bold;
     font-size: 17px;
-    color: black;
+    color: white;
     display: flex;
 }
 
     /*--- Ironning Station One */
 .ironing .ironing_1{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
     margin-left: 2.5%;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 5px;
 }
 
 
     /*--- Ironning Station Two */
 .ironing .ironing_2{
-    width: 110px;
-    height: 105px;
-    background-color: wheat;
-    flex-direction: column;
-    float: left;
-    margin-left: 13px;
-
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 15px;
+    margin-top: 5px;
 }
